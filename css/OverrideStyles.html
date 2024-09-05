@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Override Styles.</title>
+</head>
+<body>
+    <style>
+        body{background-color: black; font-family: monospace; color: burlywood;}
+        .blue-text{ color: blue;}
+        .pink-text{ color: hotpink;}
+        #pink{color: aquamarine;}
+    </style>
+    <p class="blue-text pink-text">Lorem ipsum dolor sit amet.</p>
+    <p class="pink-text blue-text">Lorem ipsum dolor sit amet.</p>
+    <!-- if you are using different classes on the same tag the last one made 
+    in style will make the change -->
+    <!-- the order of classes does not matter in tags but their order in style tag matters -->
+    <p class="pink-text blue-text" id="pink">Lorem ipsum dolor sit amet.</p>
+    <!-- id's are always superior and you can only have one id 
+    that mean you can't  override id's like classes-->
+</body>
+</html>

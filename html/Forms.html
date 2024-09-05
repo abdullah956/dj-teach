@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h2>
+        Input Backend and Forms
+    </h2>
+    <form action="backend.php">
+        <!-- form is used to store input on the backend php is just taken for an example-->
+        <!-- label automaically selects the box of which the id name is given to it in th for secton by just clicking the name of the box -->
+        <!-- can be used for any input type -->
+        <div>
+            <label for="idnames">Name:</label>
+            <input type="text" name="names" id="idnames">
+        </div><br>
+        <!-- div is just used to break the line -->
+        <div>
+            <label for="idcity">City:</label>
+            <input type="text" name="roles" id="idcity">
+        </div><br>
+        <div>
+            <label for="idemails">Email:</label>
+            <input type="email" name="emails" id="idemails">
+        </div><br>
+        <!-- name in email is just a key word by which your backend will know that you have entered an email -->
+        <div>
+            <label for="iddate">Date:</label>
+            <input type="date" name="date" id="iddate">
+        </div><br>
+        <!-- gives a calander -->
+        <div>
+            <label for="idhours">Hours:</label>
+            <input type="number" name="hours" id="idhours">
+        </div><br>
+        <!-- can change input type to numbers -->
+        <div>
+            <label for="idcheckbox"> age is above 20 ?</label>
+            <input type="checkbox" name="eligibility" id="idcheckbox">
+        </div><br>
+        <!-- gives checkbox to take input -->
+        <div>
+            <strong>Gender:</strong>
+            <label for="idgendersmale">Male:</label>
+            <input type="radio" name="genders" id="idgendersmale"> 
+            <label for="idgendersfemale">Female:</label>
+            <input type="radio" name="genders" id="idgendersfemale"> 
+            <label for="idgendersother">Other:</label>
+            <input type="radio" name="genders" id="idgendersother">
+        </div><br>
+        <!-- here name of genders are same so one will be selected you can not select more than one
+        input is taken in radio , because gender will take one value by itself to backend -->
+        <div>
+            <label for="idwrite">Write something:</label><br>
+            <textarea name="writtingtext" cols=60" rows="10" id="idwrite"></textarea>
+        </div><br>
+        <!-- textarea will give you a text area/box -->
+        <!-- and always remember br tag is self closing -->
+        <div>
+            <label for="idreligion">Muslim:</label>
+            <input type="checkbox" name="religion" checked id="idreligion">
+        </div><br>
+        <!-- if you want somwthing to be checked by default use checked -->
+        <div>
+            <label for="idfruit">Fav. Fruit:</label>
+            <select name="fruit" id="idfruit">
+            <option value="mang">Mango</option>
+            <option value="appl" selected>Apple</option>
+            <option value="orang">Orange</option>
+            </select>
+        </div><br>
+        <!-- select is used to make options put subject in name and put something as an id for lable
+        then use options value them to store in backend , then just wirte options availabel
+        if you want an option to be selected by default use selected-->
+        <div>
+            <label for="idreset">Reset:</label>
+            <input type="reset" value="Click to reset" id="idreset">
+        </div><br>
+        <!-- reset will reset the form input you have given -->
+        <div>
+            <label for="idsubmit">Submit:</label>
+            <input type="submit" value="click here" id="idsubmit">
+        </div><br>
+        <!-- input:submit to make a submit button and put value in it any thing you wanna show on submit button -->
+        <!-- the submitted data will go in the backend -->
+    </form>
+</body>
+</html>

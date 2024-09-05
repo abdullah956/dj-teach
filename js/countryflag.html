@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #flag {
+            max-width: 1000px;
+            max-height: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <label for="country">Select country</label>
+        <select name="country" id="cou" onchange="f1()">
+            <option value="none">none</option>
+            <option value="pak">Pakistan</option>
+            <option value="ind">India</option>
+            <option value="china">China</option>
+        </select>
+    </div>
+
+    <img id="flag" src="" alt="" style="background-color: aqua;">
+    <script>
+        function f1() {
+            const selectedCountry = document.getElementById('cou').value;
+            const flagImg = document.getElementById('flag');
+            if (selectedCountry === "pak") {
+                flagImg.src = "x.jpeg"; 
+            } else if (selectedCountry === "ind") {
+                flagImg.src = "y.jpeg"; 
+            } else if (selectedCountry === "china") {
+                flagImg.src = "z.jpg";
+            } else {
+                flagImg.src = "";
+            }
+        }
+
+
+        
+     $(document).ready(function () {
+  $(".countryForm").submit(function () {
+
+    // Get the selected country
+    var selectedCountry = $("#countries").val();
+
+    // Determine the image source based on the selected country
+    var imageSrc = "";
+
+    if (selectedCountry === "Pakistan") {
+      imageSrc = "Imgs/100FRONT.jpg"; // Replace with the actual image filename
+    } else if (selectedCountry === "India") {
+      imageSrc = "Imgs/100india.jpg"; // Replace with the actual image filename
+    } else if (selectedCountry === "America") {
+      imageSrc = "Imgs/100 america.jpg"; // Replace with the actual image filename
+    }
+
+    // Display the image
+    $("#noteImage").attr("src", imageSrc);
+    return false;
+  });
+});
+    </script>
+</body>
+</html>

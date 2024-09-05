@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <form name="f1" id="f1" method="" action="" >   <!--onsubmit="message();"-->
+        <p>Enter Name:</p>
+        <input type="text" id="na" class="name" placeholder="name here">
+
+        <p>Enter Password</p>
+        <input type="password" name="passs" id="passs" class="passs" placeholder="password">
+
+        <p>Enter DOB:</p>
+        <input type="date" name="date" id="iddate">
+
+        <p>Enter Email</p>
+        <input type="email" name="" id="fm" class="" placeholder="email">
+
+        <p>Select Gender</p>
+        <input type="radio" name="gender" id="male" value="Male"> Male
+        <input type="radio" name="gender" id="female" value="female">Female
+
+        <p>Enter Course</p>
+        <input type="checkbox" name="Course1" id="" value="ML">ML
+        <input type="checkbox" name="Course2" id="" value="HTML" checked>HTML
+
+        <p>Enter Country</p>
+        <select name="countries" id="countries">
+            <option value="none">none</option>
+            <option value="pakistan">Pakistan</option>
+            <option value="india">India</option>
+
+        </select>
+
+        <p>Enter Description</p>
+
+        <textarea name="" id="" cols="30" rows="10">
+
+        </textarea>
+
+        <p>Cell no</p>
+        <input type="number" name="" id="" max="10">
+        <input type="text" name="" id=""  maxlength="11" placeholder="phone no">
+
+        <p>CNIC</p>
+        <input type="text"  pattern="[0-9]{5}-[0-9]{7}-[0-9]" name="n1" id="n1" placeholder="00000-000000-0" >
+
+        <br>
+        <input type="text" name="" id="" placeholder="+92" disabled style="width: 25px;">
+        <input type="text" placeholder="300-0000000">
+
+        <input type="submit" value="Submit" onclick="gendr();">
+
+        <p>Text</p>
+        <input type="text" id="text" name="text" class="text" readonly>
+
+
+
+    </form>
+
+
+
+
+
+    
+
+    <script>
+        function message(){
+
+           
+            alert("Clicked")
+            alert(document.forms['f1']["n1"].value)
+            document.getElementById('text').value=document.forms['f1']["n1"].value;
+            
+        }
+
+        function gendr() {
+
+
+            if(document.getElementById('na').value == "Abdullah")
+            {
+                alert('Male selected')
+            }
+
+            else
+            {
+                alert('error occured')
+                document.forms['f1']["fm"].focus();
+               
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="pak">Pakistan</p>
+
+    <input type="text" name="size" id="size">
+
+    <input type="submit" value="Resize" onclick="f2(); return false">
+
+
+    <script>
+         function f2() {
+            var newSize = document.getElementById('size').value;
+            document.getElementById('pak').style.fontSize = newSize + 'px';
+        }
+
+    </script>
+    
+</body>
+</html>

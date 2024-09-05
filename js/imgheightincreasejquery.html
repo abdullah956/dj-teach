@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        #img{
+            max-width: 1000px;
+            max-height: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="s1" id="s1" placeholder="enter first num">
+    <br>
+    <input type="text" name="s2" id="s2" placeholder="enter second num">
+    <br>
+    <input type="text" name="s3" id="s3" placeholder="enter third num">
+    <br>
+    <input type="text" name="s4" id="s4" placeholder="enter fourth num">
+    <br>
+    <button id="increaseheight">Increase img height</button>
+    <br>
+    <img src="C:\Users\SoNiC\Desktop\Fifth Semester\Web Programming\Sohaib\JS\z.jpeg" alt="" id="img">
+    <script>
+        $(document).ready(function(){
+            $("#increaseheight").click(function(){
+                var n1=parseFloat($("#s1").val());
+                var n2=parseFloat($("#s2").val());
+                var n3=parseFloat($("#s3").val());
+                var n4=parseFloat($("#s4").val());
+                var size=n1+n2+n3+n4;
+                $("#img").css("height",size);
+            })
+        })
+    </script>
+</body>
+</html>

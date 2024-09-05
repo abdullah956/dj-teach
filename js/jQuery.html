@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="hide">Alert</p>
+    <button class="st">Show tag</button>
+
+    <p class="ptag" id="ptag1">P tag</p>
+    <p class="ptag" id="ptag2">P tag</p>
+    <p class="ptag" id="ptag3">P tag</p>
+    <p class="ptag" id="ptag4">P tag</p>
+
+    <button class="showtag">Show tags</button>
+    <button class="twohide">Two Hide</button>
+
+    <p class="text">ALI</p>
+
+    <span class="html">html</span>
+
+    <p class="innerHtml">Inner Html</p>
+
+    <input type="text" name="inputval" id="inputval" />
+    <button class="setval">Set Value in input</button>
+
+    <input type="checkbox" name="" id="chk" />
+    <input type="checkbox" name="" id="chk" />
+    <button class="tick">Select All</button><br />
+
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi1JU9QNxxpei9eAJaqBRNV4uVek_zUEY7c6PXs_Ze&s"
+      alt=""
+      class="attr"
+      width="200px"
+    />
+
+    <input type="" name="" id="pstype" /><br />
+
+    <input type="text" name="" id="bg" />
+    <p class="clr" style="font-size: x-large">COLOR</p>
+
+    <button class="append">APPEND</button><br /><br />
+
+    <b class="bold">HELLO</b>
+
+    <button class="create">Create</button>
+
+    <p class="rmv" id="RMV1">REMOVING</p>
+    <p class="rmv" id="RMV1">REMOVING</p>
+    <p class="rmv" id="RMV1">REMOVING</p>
+    <p class="rmv" id="RMV2">REMOVING</p>
+    <p class="rmv" id="RMV2">REMOVING</p>
+    <p class="rmv" id="RMV2">REMOVING</p>
+
+    <button class="remove">REMOVE</button>
+
+    <input type="checkbox" name="" id="chk2" /> click
+    <img
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi1JU9QNxxpei9eAJaqBRNV4uVek_zUEY7c6PXs_Ze&s"
+      alt=""
+      class="img"
+      width="200px"
+    />
+
+    <button class="time">TIME</button>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $(".hide").click(function () {
+          $(this).hide();
+        });
+
+        $(".st").click(function () {
+          $(".hide").show();
+        });
+
+        $(".twohide").click(function () {
+          $("#ptag1").hide();
+          $(".ptag").css("color", "red");
+        });
+
+        $(".showtag").click(function () {
+          $("#ptag1").show();
+          $("#ptag1").css("color", "blue");
+        });
+
+        $(".text").click(function () {
+          $(this).text("Ahmed");
+        });
+
+        $(".html").click(function () {
+          $(this).html("Abdullah");
+        });
+
+        $(".innerHtml").click(function () {
+          $(this).html("CLICKED INNER HTML");
+        });
+
+        $(".setval").click(function () {
+          $("#inputval").val("ABDULLAH ARSHED");
+        });
+
+        $(".tick").click(function () {
+          $("input[type='checkbox']").prop("checked", true);
+        });
+
+        $(".attr").click(function () {
+          $(".attr").attr("width", "500px");
+        });
+
+        $("#pstype").click(function () {
+          $(this).attr("type", "password");
+        });
+
+        $("#bg").click(function () {
+          if ($(this).val() > 20) {
+            $("#bg").css("height", "30px");
+          } else {
+            $(".clr").css("color", "gold");
+          }
+        });
+
+        $(".append").click(function () {
+          var after = "<p>AFTER</p><p>After After</p>";
+
+          $(".clr").append("<p>APPENDED</p>");
+          $(".clr").prepend("<p>PREPENDED</p>");
+          $(".clr").before("<p>BEFORE</p>");
+          $(".clr").after(after);
+
+          $(".clr").after("<span>ALII</span>", "<p>ALII</p>");
+        });
+
+        $(".bold").click(function () {
+          var bld = $("<b></b>").text("ASIA");
+          $(".bold").html(bld);
+        });
+
+        $(".create").click(function () {
+          var b = document.createElement("b");
+          b.innerHTML = "AFRICA";
+          $(".bold").html(b);
+        });
+
+        $(".remove").click(function () {
+          $(".rmv").remove("#RMV1");
+          $(".rmv").css("background-color", "Red");
+          $("#RMV2").empty();
+        });
+
+        // 1st method
+
+        // $("#chk2").change(function () {
+        //   if($("#chk2").is(":checked")){
+        //     $(".img").css("width", "20px")
+        //   }
+
+        // });
+
+        // 2nd method
+
+        $("#chk2").change(function () {
+          if ($(this[":checked"])) {
+            $(".img").css("width", "20px");
+          }
+        });
+
+        $(".time").click(function () {
+          var dt = new Date();
+          var time =
+            dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+          document.write(time);
+        });
+      });
+    </script>
+  </body>
+</html>
+1 

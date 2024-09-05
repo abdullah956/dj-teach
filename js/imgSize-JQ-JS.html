@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Enter width:<input
+      type="text"
+      name=""
+      id="width"
+      class="width"
+      oninput="f1();"
+    />
+    Enter Height:
+    <input type="text" name="" id="height" class="height" oninput="f2();" />
+    <br />
+    <img
+      src="https://cloudfront-us-east-2.images.arcpublishing.com/reuters/F6INOOMSRRL5XOOQDRPZUWPWBA.jpg"
+      alt=""
+      id="img"
+      style="width: 20vh"
+    />
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="imp.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".width").on("input", function () {
+          $("#img").css("width", this.value + "vw");
+        });
+        $(".height").on("input", function () {
+          $("#img").css("height", this.value + "vw");
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+
+    </style>
+</head>
+<body>
+
+    <input type="text" name="" id="f1" placeholder="Enter any word ">
+    <input type="text" name="" id="show">
+    <input type="button" name="" id="" onclick="converting();" value="convert">
+
+    <button onclick="changeBackgroundColor();">Background Change</button>
+    <input type="text" name="color" id="color" class="color">
+
+    <button onclick="allf()" value="All in 1"></button>
+
+
+    <script>
+
+        function allf(){
+            converting();
+            changeBackgroundColor();
+        }
+         function converting() {
+            var inputElement = document.getElementById('f1').value;
+            var outputElement = document.getElementById('show');
+
+
+            // Convert the text to uppercase
+            var uppercaseText = inputElement.toUpperCase();
+
+            // Set the value of the second input field to the uppercase text
+            outputElement.value = uppercaseText;
+        }
+
+        function changeBackgroundColor(value) {
+           col= document.getElementById('color').value
+            // You can set the new background color here, for example:
+            document.body.style.backgroundColor = col;
+        }
+    </script>
+    
+</body>
+</html>

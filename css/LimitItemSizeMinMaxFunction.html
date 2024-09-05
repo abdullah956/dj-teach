@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limit Item Size MinMax function.</title>
+</head>
+<body>
+    <style>
+        .d1{background-color: lightblue;}
+        .d2{background-color: orange;}
+        .d3{background-color: aquamarine;}
+        .d4{background-color: pink;}
+        .d5{background-color: greenyellow;}
+
+        .container{ font-size: 40px; width: 100%; min-height: 300px;
+        background-color: lightgrey; display: grid;
+        grid-template-columns: repeat(3,minmax(90px,1fr)); 
+        grid-template-rows: repeat(3,minmax(90px,min-content));
+        grid-gap: 10px 20px;}
+    </style>
+    <div class="container">
+        <div class="d1">Lorem.</div>
+        <div class="d2">Lorem.</div>
+        <div class="d3">Lorem.</div>
+        <div class="d4">Lorem.</div>
+        <div class="d5">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Doloremque ad beatae provident reprehenderit ullam nostrum quas incidunt
+        commodi nam ipsum molestias quibusdam totam nobis dolor voluptate, 
+        modi quisquam praesentium maiores.</div>
+    </div>
+    <!-- you can use minmax function like this you can give first value as min and second value as
+    max the browser will automatically change the size of grid box depending on data -->
+</body>
+</html>

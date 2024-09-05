@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Fall Back Values.</title>
+</head>
+<body>
+    <style>
+        .penguin{
+        --penguinskin: red;}
+        .text{background-color: var(--penguinskin, hotpink);}
+    </style>
+    <!-- if for some reason the colors in the variable does not show you can use fall back value
+    like this after the variable name add another color so that the browser can make 
+    make changes with it -->
+    <p class="text penguin">Lorem ipsum dolor sit.</p>
+    <p class="text penguin">Lorem ipsum dolor sit.</p>
+</body>
+</html>

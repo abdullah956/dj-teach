@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="ptag" onmouseover="func();" onmouseleave="func2();">Ali</p>
+
+    <div
+      id="myDiv"
+      style="width: 100px; height: 100px; background-color: rgb(0, 191, 255)"
+    ></div>
+    <script>
+      function func() {
+        var nametag = document.getElementById("ptag");
+        nametag.innerHTML = "Muhammad Ali";
+      }
+
+      function func2() {
+        var nametag = document.getElementById("ptag");
+        nametag.innerHTML = "Ali";
+      }
+
+      var myDiv = document.getElementById("myDiv");
+
+      // Event handler for mouse down
+      myDiv.addEventListener("mousedown", function (event) {
+        myDiv.style.backgroundColor = "yellow";
+      });
+
+      // Event handler for mouse up
+      myDiv.addEventListener("mouseup", function (event) {
+        myDiv.style.backgroundColor = "red";
+      });
+    </script>
+  </body>
+</html>

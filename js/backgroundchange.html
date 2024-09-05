@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <button onclick="changeBackgroundColor(document.getElementById('color').value);">Background Change</button>
+    <input type="text" name="color" id="color" class="color">
+
+    <br>
+    <p id="hello">Without Button</p>
+    <input type="text" name="" id="" oninput="changeBackgroundColor(this.value);">
+
+    
+    
+
+    <script>
+        function changeBackgroundColor(value) {
+            document.body.style.backgroundColor = value;
+            document.getElementById('hello').style.height='400px';
+        }
+    </script>
+</body>
+</html>

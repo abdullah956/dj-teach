@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Units 2 Changes Size.</title>
+</head>
+<body>
+    <style>
+        .d1{background-color: lightblue;}
+        .d2{background-color: orange;}
+        .d3{background-color: aquamarine;}
+        .d4{background-color: pink;}
+        .d5{background-color: greenyellow;}
+
+        .container{ font-size: 40px; width: 100%; background-color: lightgrey; display: grid;
+        grid-template-columns: auto 50px 10% 2fr 1fr; grid-template-rows: 50px 50px;
+    grid-column-gap: 20px;}
+    </style>
+    <div class="container">
+        <div class="d1">Lorem.</div>
+        <div class="d2">Lorem.</div>
+        <div class="d3">Lorem.</div>
+        <div class="d4">Lorem.</div>
+        <div class="d5">Lorem.</div>
+    </div>
+    <!-- you can customize the lenght width or rows and columns by px by auto by fr by %
+    auto means that the element will occupy only the space enough for it.
+    px means pixles
+    % means that the elemet will occupy % of the total available space
+    fr means fraction 
+    all fraction unit adjust with each other when you make them -->
+</body>
+</html>

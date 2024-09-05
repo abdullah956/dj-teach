@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <center>
+        <form name="" id="" action="" method="">
+            <p>Enter number 1</p>
+            <input type="number" name="n1" id="n1">
+            <p>Enter number 2</p>
+            <input type="number" name="n2" id="n2">
+            <p>result</p>
+            <input type="number" name="result" id="result">
+            <input type="submit" value="ADD" onclick="add(); return false">
+        </form>
+    </center>
+
+
+    <script>
+
+        function add(){
+            var v1 = parseFloat(document.getElementById('n1').value);
+            var v2 = parseFloat(document.getElementById('n2').value);
+
+            var result = v1 + v2;
+            document.getElementById('result').value = result;
+
+        }
+
+
+
+    </script>
+</body>
+</html>

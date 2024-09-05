@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repeat function.</title>
+</head>
+<body>
+    <style>
+        .d1{background-color: lightblue;}
+        .d2{background-color: orange;}
+        .d3{background-color: aquamarine;}
+        .d4{background-color: pink;}
+        .d5{background-color: greenyellow;}
+
+        .container{ font-size: 40px; width: 100%; min-height: 300px;
+        background-color: lightgrey; display: grid;
+        grid-template-columns: repeat(3,1fr); grid-template-rows: repeat(3,1fr);
+        grid-gap: 10px 20px;}
+    </style>
+    <div class="container">
+        <div class="d1">Lorem.</div>
+        <div class="d2">Lorem.</div>
+        <div class="d3">Lorem.</div>
+        <div class="d4">Lorem.</div>
+        <div class="d5">Lorem.</div>
+    </div>
+    <!-- you can you repeat fucntion to repeat a certain measurement you wanna use again and again 
+    in a grid for grid elements repeat(number of times you want to repeat,the measurement) 
+    also you can use other type of measurements like px after the repeat function -->
+</body>
+</html>

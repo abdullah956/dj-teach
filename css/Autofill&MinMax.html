@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoFill&MinMax</title>
+</head>
+<body>
+    <style>
+        .container{display: grid; grid-gap: 20px; 
+        grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); 
+        }
+        .box{border: 2px solid black; background-color: aqua; padding: 20px;}
+    </style>
+    <div class="container">
+        <div class="box">Item-1</div>
+        <div class="box">Item-2</div>
+        <div class="box">Item-3</div>
+        <div class="box">Item-4</div>
+        <div class="box">Item-5</div>
+        <div class="box">Item-6</div>
+        <div class="box">Item-7</div>
+        <div class="box">Item-8</div>
+        <div class="box">Item-9</div>
+        <div class="box">Item-10</div>
+        <div class="box">Item-11</div>
+        <div class="box">Item-12</div>
+        <div class="box">Item-13</div>
+    </div>
+    <!-- auto fit will fill the first line first then second so on according to the 
+    browser , and min max will show min size of grid in min screen device 
+    a template and max size on max screen devices
+    this helps to make reponsive layouts -->
+</body>
+</html>

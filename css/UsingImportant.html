@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Important.</title>
+</head>
+<body>
+    <style>
+        body{background-color: black; font-family: monospace; color: burlywood;}
+        .blue-text{ color: blue;}
+        .pink-text{ color: hotpink !important;}
+        #pink{color: aquamarine;}
+    </style>
+    <p class="blue-text pink-text" id="pink" style="color: red;">Lorem, ipsum.</p>
+    <!-- the most powerfull and prioritized in style is the one with important keyword
+    it will take effect ignoring all the classes id's and inline styles -->
+    <!-- if you used this keyword in clases the last one in order in style tag will make changes
+    if you used this in classes and id of a tag  the id will make changes 
+    if you put this in inline style that wil make the change-->
+</body>
+</html>

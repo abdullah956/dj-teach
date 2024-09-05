@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prioritizing Styles.</title>
+</head>
+<body>
+    <style>
+        body{background-color: black; font-family: monospace; color: burlywood;}
+        .pink-text{ color: hotpink;}
+        #pink{color: aquamarine;}
+    </style>
+    <h1 class="pink-text">Lorem ipsum dolor sit.</h1>
+    <p class="pink-text">Lorem ipsum dolor sit.</p>
+    <!-- which ever one is more specific to the tag will make the apply it's on text 
+    here class is more specific than just  color in body text -->
+    <p class="pink-text" id="pink">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+    <!-- id's are always superior to classes -->
+</body>
+</html>
